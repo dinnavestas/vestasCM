@@ -4,7 +4,8 @@
   gather_facts: true  # Speed up the task by skipping the facts gathering phase
 
   tasks:
-    - name: Ping
+    - name: Ping1
+      check_mode: true
       ping:
     - name: Print Metadata
       check_mode: true
