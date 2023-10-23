@@ -7,4 +7,4 @@
     - name: Print Metadata
       become: true
       debug:
-        msg: "Playbook ran: {{ ansible_play_name }} | Hosts affected: {{ ansible_play_hosts }} | was launched by {{ ansible_user }} | Date: {{ ansible_date_time.iso8601 }} | {{ ansible_facts }}"
+        msg: "Playbook ran: {{ ansible_play_name }} | Hosts affected: {{ ansible_play_hosts }} | was launched by  {{ ansible_user_id }} | Date: {{ ansible_date_time.iso8601 }} "
