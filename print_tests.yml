@@ -5,5 +5,6 @@
 
   tasks:
     - name: Print Metadata
+      become: true
       debug:
-        msg: "This playbook was launched by {{ ansible_env }} on {{ ansible_date_time.iso8601 }}"
+        msg: "Hosts affected: {{ ansible_play_hosts }} | was launched by {{ ansible_user }} or {{ ansible_become_user }} | Date: {{ ansible_date_time.iso8601 }}"
