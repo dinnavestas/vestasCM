@@ -12,6 +12,12 @@
       apt:
         name: apache2
         state: present
+
+    - name: Enable and Start Apache Service
+      systemd:
+        name: apache2
+        enabled: yes
+        state: started
         
     - name: Print Metadata
       debug:
