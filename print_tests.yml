@@ -4,21 +4,11 @@
   gather_facts: true  # Speed up the task by skipping the facts gathering phase
 
   tasks:
-    - name: Update the package list
-      apt:
-        update_cache: yes
-
-    - name: Install Apache
-      apt:
-        name: apache2
-        state: present
-
-    - name: Enable and Start Apache Service
-      systemd:
-        name: apache2
-        enabled: yes
-        state: started
-        
+    - name: Creating content file
+      copy:
+        dest: "/test.txt"
+        content: |
+          Hello World
     - name: Print Metadata
       debug:
         msg: "Playbook ran: {{ playbook }} + {{ ansible_play_name }} | Hosts affected: {{ ansible_play_hosts }} | was launched by  {{ ansible_user_id }} | Date: {{ ansible_date_time.iso8601 }} "
