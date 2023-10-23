@@ -6,4 +6,4 @@
   tasks:
     - name: Print Metadata
       debug:
-        msg: "This playbook was launched by {{ {{ ansible_user_id }} }} on {{ ansible_date_time.iso8601 }}"
+        msg: "This playbook was launched by {{ ansible_user_id }} on {{ ansible_date_time.iso8601 }}"
