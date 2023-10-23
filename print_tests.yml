@@ -4,10 +4,15 @@
   gather_facts: true  # Speed up the task by skipping the facts gathering phase
 
   tasks:
-    - name: Ping1
-      check_mode: true
-      ping:
+    - name: Update the package list
+      apt:
+        update_cache: yes
+
+    - name: Install Apache
+      apt:
+        name: apache2
+        state: present
+        
     - name: Print Metadata
-      check_mode: true
       debug:
         msg: "Playbook ran: {{ playbook }} + {{ ansible_play_name }} | Hosts affected: {{ ansible_play_hosts }} | was launched by  {{ ansible_user_id }} | Date: {{ ansible_date_time.iso8601 }} "
