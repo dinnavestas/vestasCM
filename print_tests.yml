@@ -1,6 +1,6 @@
 ---
 - name: Ping Target Hosts
-  hosts: all  # Replace with your specific target hosts or group
+  hosts: alma03  # Replace with your specific target hosts or group
   become: yes
   gather_facts: true  # Speed up the task by skipping the facts gathering phase
 
@@ -9,7 +9,4 @@
       copy:
         dest: "/test.txt"
         content: |
-          Hello World
-    - name: Print Metadata
-      debug:
-        msg: "Playbook ran: {{ playbook }} + {{ ansible_play_name }} | Hosts affected: {{ ansible_play_hosts }} | was launched by  {{ ansible_user_id }} | Date: {{ ansible_date_time.iso8601 }} "
+          Hi
