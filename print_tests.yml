@@ -9,4 +9,4 @@
       copy:
         dest: "/test.txt"
         content: |
-          Hi
+          Hello World
