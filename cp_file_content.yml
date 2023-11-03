@@ -1,0 +1,11 @@
+---
+- name: Ping Target Hosts
+  hosts: alma03  # Replace with your specific target hosts or group
+  become: yes
+  gather_facts: true  # Speed up the task by skipping the facts gathering phase
+
+  tasks:
+    - name: Copy content from file to destination
+      template:
+        src: file.txt
+        dest: /testfile.txt
