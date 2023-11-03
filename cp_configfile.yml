@@ -5,8 +5,7 @@
   gather_facts: true  # Speed up the task by skipping the facts gathering phase
 
   tasks:
-    - name: Creating content file
+  - name: Copy file from control node to target VM
       copy:
-        dest: "/test.txt"
-        content: |
-          Hello World
+        src: config-file.xml
+        dest: /config-file.xml
