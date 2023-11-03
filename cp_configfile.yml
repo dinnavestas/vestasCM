@@ -6,6 +6,6 @@
 
   tasks:
   - name: Copy file from control node to target VM
-      copy:
-        src: config-file.xml
-        dest: /config-file.xml
+    copy:
+      src: config-file.xml
+      dest: /config-file.xml
