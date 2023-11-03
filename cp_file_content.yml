@@ -5,7 +5,7 @@
   gather_facts: true  # Speed up the task by skipping the facts gathering phase
 
   tasks:
-    - name: Copy content from file to destination
-      template:
-        src: file.txt
-        dest: /testfile.txt
+  - name: Copy content from file to destination
+    template:
+      src: file.txt
+      dest: /testfile.txt
