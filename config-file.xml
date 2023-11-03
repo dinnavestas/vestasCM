@@ -1,0 +1,9 @@
+<?xml version="2.0" ?>
+<um-configuration version="1.0">
+  <applications>
+    <application name="app1">
+    </application>
+    <application name="app2">
+    </application>
+  </applications>
+</um-configuration>
